@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ZZUIKit_Example' do
+  pod 'ZZUIKit', :path => '../'
+
+  target 'ZZUIKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+    pod 'FBSnapshotTestCase'
+  end
+end

@@ -1,0 +1,6 @@
+framework module ZZUIKit {
+  umbrella header "ZZUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -325,11 +325,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZZUIKit_Example/Pods-ZZUIKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ZZFoundation/ZZFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/ZZUIKit/ZZUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ZZUIKitEx/ZZUIKitEx.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZUIKitEx.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

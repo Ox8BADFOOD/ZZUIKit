@@ -1,0 +1,39 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Kiwi (3.0.0)
+  - ZZFoundation (0.1.2)
+  - ZZUIKit (0.1.0):
+    - ZZUIKitEx (~> 0.1.0)
+  - ZZUIKitEx (0.1.0):
+    - ZZFoundation (~> 0.1.2)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Kiwi
+  - ZZUIKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Kiwi
+    - ZZFoundation
+    - ZZUIKitEx
+
+EXTERNAL SOURCES:
+  ZZUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+  ZZFoundation: 6a95397beaab8bf75160a004c21e8d2c7f769473
+  ZZUIKit: 08060a300c9999ceaa1868b10c6a50eb072db9a5
+  ZZUIKitEx: 09e391f15b127b5620e1dc447d23bd6f66d83b43
+
+PODFILE CHECKSUM: cc4ee7a30a9e12975ccd373cd52edf786aed87e5
+
+COCOAPODS: 1.9.3

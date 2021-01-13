@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface ZZViewController : UIViewController
+@interface ZZViewController : UITableViewController
 
 @end

@@ -1,0 +1,6 @@
+framework module ZZUIKitEx {
+  umbrella header "ZZUIKitEx-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,15 +1,15 @@
 //
-//  ZZCountTextView.h
+//  ZZSOView.h
 //  FBSnapshotTestCase
 //
-//  Created by Max on 2021/1/12.
+//  Created by Max on 2021/1/15.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZZCountTextView : UIView
+@interface ZZSOView : UIView
 
 @end
 

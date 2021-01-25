@@ -1,13 +1,13 @@
 //
-//  ZZCountTextView.m
-//  FBSnapshotTestCase
+//  ZZListTitle.m
+//  Aspects
 //
-//  Created by Max on 2021/1/12.
+//  Created by Max on 2021/1/18.
 //
 
-#import "ZZCountTextView.h"
+#import "ZZListTitle.h"
 
-@implementation ZZCountTextView
+@implementation ZZListTitle
 
 /*
 // Only override drawRect: if you perform custom drawing.

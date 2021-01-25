@@ -1,13 +1,13 @@
 //
-//  ZZTextView.m
+//  ZZSOView.m
 //  FBSnapshotTestCase
 //
-//  Created by Max on 2021/1/12.
+//  Created by Max on 2021/1/15.
 //
 
-#import "ZZTextView.h"
+#import "ZZSOView.h"
 
-@implementation ZZTextView
+@implementation ZZSOView
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -4,11 +4,18 @@ platform :ios, '9.0'
 
 target 'ZZUIKit_Example' do
   pod 'ZZUIKit', :path => '../'
-
+  pod 'Masonry', '~> 1.1.0'
+  pod 'DoraemonKit/Core', '~> 3.0.4'
+  pod 'DoraemonKit/WithLoad', '~> 3.0.4'
+  pod 'DoraemonKit/WithLogger', '~> 3.0.4'
+  pod 'DoraemonKit/WithDatabase', '~> 3.0.4'
+  pod 'DoraemonKit/WithMLeaksFinder', '~> 3.0.4'
+  
   target 'ZZUIKit_Tests' do
     inherit! :search_paths
-
+    pod 'ZZFoundation',:path => '/Users/max/Desktop/github/ZZLib/ZZFoundation'
+    pod 'ZZUIKitEx',:path => '/Users/max/Desktop/github/ZZLib/ZZUIKitEx'
     pod 'Kiwi'
-    pod 'FBSnapshotTestCase'
+    pod 'FBSnapshotTestCase'  
   end
 end

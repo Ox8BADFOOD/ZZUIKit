@@ -7,8 +7,8 @@
 //
 
 #import "ZZDoubleVC.h"
-
-@interface ZZDoubleVC ()
+#import <ZZUIKitEx/ZZUIKitEx.h>
+@interface ZZDoubleVC ()<ZZDoubleViewControllerContainer,UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -16,17 +16,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(CGRect)mainRect{
+    return CGRectMake(0, 0, SCREEN_W()/4, SCREEN_H());;
 }
-*/
+
+-(CGRect)subRect{
+    return CGRectMake(SCREEN_W()/4, 0, SCREEN_W()*3/4, SCREEN_H());
+}
+
+-(UIViewController *)mainController{
+    UITableViewController *tabviewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tabviewController.tableView.delegate = self;
+    tabviewController.tableView.dataSource = self;
+    return tabviewController;
+}
+
+
+-(UIViewController *)subController{
+    UIViewController *vc = [UIViewController new];
+    vc.view.backgroundColor = [UIColor redColor];
+    return vc;
+}
+
+#pragma mark -- tableView
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    cell.textLabel.text = @"123123";
+    return cell;
+}
+
 
 @end

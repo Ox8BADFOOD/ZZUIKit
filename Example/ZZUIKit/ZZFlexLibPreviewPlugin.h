@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZZFlexLibPreviewPlugin : FlexHttpVC<DoraemonPluginProtocol>
+@interface ZZFlexLibPreviewPlugin : NSObject<DoraemonPluginProtocol>
 
 @end
 

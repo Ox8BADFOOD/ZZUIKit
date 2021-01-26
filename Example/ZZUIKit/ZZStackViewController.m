@@ -7,26 +7,50 @@
 //
 
 #import "ZZStackViewController.h"
-
+#import <ZZUIKit/ZZTextImgView.h>
+#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <Masonry/Masonry.h>
 @interface ZZStackViewController ()
-
 @end
 
 @implementation ZZStackViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    ZZTextImgView *ziView = [[ZZTextImgView alloc] initWithDirection:ZZDirectionVertical widgetAlign:ZZTextImgAlignReverse];
+//    _ziView.frame = CGRectMake(100, 100, 100, 100);
+    ziView.lab.text = @"hello";
+    ziView.imgV.image = [UIImage imageNamed:@"ic_tab_home_active"];
+    [self.view addSubview:ziView];
+    [ziView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view).centerOffset(CGPointMake( - SCREEN_W()/4, -SCREEN_H()/4));
+    }];
+    
+    ZZTextImgView *ziView1 = [[ZZTextImgView alloc] initWithDirection:ZZDirectionVertical widgetAlign:ZZTextImgAlignNormal];
+        ziView1.lab.text = @"hello";
+        ziView1.imgV.image = [UIImage imageNamed:@"ic_tab_home_active"];
+        [self.view addSubview:ziView1];
+        [ziView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.mas_equalTo(self.view).centerOffset(CGPointMake(SCREEN_W()/4, -SCREEN_H()/4));
+        }];
+    
+    ZZTextImgView *ziView2 = [[ZZTextImgView alloc] initWithDirection:ZZDirectionHorizontal widgetAlign:ZZTextImgAlignNormal];
+    ziView2.lab.text = @"hello";
+    ziView2.imgV.image = [UIImage imageNamed:@"ic_tab_home_active"];
+    [self.view addSubview:ziView2];
+    [ziView2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view).centerOffset(CGPointMake(- SCREEN_W()/4, SCREEN_H()/4));
+    }];
+    
+    ZZTextImgView *ziView3 = [[ZZTextImgView alloc] initWithDirection:ZZDirectionHorizontal widgetAlign:ZZTextImgAlignReverse];
+    ziView3.lab.text = @"hello";
+    ziView3.imgV.image = [UIImage imageNamed:@"ic_tab_home_active"];
+    [self.view addSubview:ziView3];
+    [ziView3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view).centerOffset(CGPointMake(SCREEN_W()/4, SCREEN_H()/4));
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<UIView layout="flex:1,flexDirection:row,justifyContent:flex-start,alignItems:flex-start"
+ attr="bgColor:red"
+>
+    <!-- 左边 -->
+    <UIImageView attr="source:,bgColor:blue" layout="width:58.5,aspectRatio:1,"/>
+    <!-- 右边 -->
+    <UIView layout="flex:1,flexDirection:col,alignItems:flex-start,margin:14/6.5/0/0,"
+     attr="bgColor:green"
+    >
+        <!-- title -->
+        <UIView layout="flexDirection:row"
+         attr="bgColor:purple"
+        >
+            <UILabel name="title" layout="
+                " attr="
+                font:PingFangSC-Medium|20,
+                color:#ffffff,
+                text:title,
+                bgColor:lightGray,
+            "/>
+
+            <UILabel name="subtitle" layout="
+                    marginLeft:5,
+                " attr="
+                font:PingFangSC-Medium|20,
+                color:#ffffff,
+                text:subtitle,
+                bgColor:lightGray,
+            "/>
+        </UIView>
+        
+        <!-- detail -->
+        <UIView name="describeContainer" layout="
+            flexDirection:row,
+            justifyContent:flex-start,
+            alignItems:center,
+            marginTop:2.5,
+            flexWrap:wrap,
+            "
+            attr="bgColor:cyan"
+        >
+            <UILabel name="describe" layout="
+                    margin:0/0/10/5
+                " attr="
+                    fontSize:PingFangSC-Regular|14,
+                    color:#ffffff,
+                    text:detail,
+                    bgColor:lightGray,
+                    clipsToBounds
+            "/>
+        </UIView>
+    </UIView>
+
+    
+</UIView>

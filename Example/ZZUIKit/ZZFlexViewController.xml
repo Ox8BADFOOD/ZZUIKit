@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<UIView class="" layout="flex:1,
+        flexDirection:col,
+        justifyContent:center,
+        alignItems:center" attr="bgColor:purple">
+    <UIView class="" layout="paddingTop:10,paddingRight:0,paddingBottom:20,paddingLeft:40," attr="bgColor:#00ff00,
+        borderColor:#000000,
+        borderWidth:2">
+        <UILabel name="" class="" layout="" attr="fontSize:14,
+        textAlign:center,
+        color:#333333,
+        lineBreakMode:truncatingTail,
+        linesNum:1,
+        text:123," />
+    </UIView>
+    
+    <UILabel name="" class="" layout="" attr="fontSize:14,
+        color:#333333,
+        lineBreakMode:truncatingTail,
+        linesNum:1,
+        text:123" />
+    <UILabel name="" class="" layout="" attr="fontSize:14,
+        color:#333333,
+        lineBreakMode:truncatingTail,
+        linesNum:1,
+        text:123" />
+
+</UIView>

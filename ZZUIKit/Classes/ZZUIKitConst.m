@@ -5,13 +5,18 @@
 //  Created by Max on 2021/1/15.
 //
 
-#import "ZZUIKit.h"
+#import "ZZUIKitConst.h"
 
-@implementation ZZUIKit
+NSString const *ZZCornerRadius = @"radius";
+NSString const *ZZPadding = @"padding";
 NSString const *ZZTitleKey = @"titel";
 NSString const *ZZTitleColorKey = @"titelColor";
+NSString const *ZZTitleColorSelectKey = @"titelSelectColor";
 NSString const *ZZColorKey = @"color";
 NSString const *ZZFontKey = @"font";
+NSString const *ZZFontSizeKey = @"fontSize";
 NSString const *ZZBgcKey = @"bgc";
 NSString const *ZZActionKey = @"action";
-@end
+NSString const *ZZImgKey = @"img";
+NSString const *ZZImgSelectKey = @"selectImg";
+NSString const *ZZRotateKey = @"rotate";

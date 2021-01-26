@@ -32,11 +32,12 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ZZUIKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'ZZUIKit' => ['ZZUIKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'ZZUIKit' => ['ZZUIKit/Assets/*.png','ZZUIKit/Assets/*.xml','ZZUIKit/Assets/*.strings','ZZUIKit/Assets/*.lproj/*']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ZZUIKitEx', '~> 0.1.0'
+  s.dependency 'ZZUIKitEx', '~> 0.1.1'
+  s.dependency 'FlexLib', '~> 2.9.1'
 end

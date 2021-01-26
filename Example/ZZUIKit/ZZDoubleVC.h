@@ -6,7 +6,7 @@
 //  Copyright © 2021 bymiracles@163.com. All rights reserved.
 //
 
-#import "ZZDoubleViewController.h"
+#import <ZZUIKit/ZZDoubleViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

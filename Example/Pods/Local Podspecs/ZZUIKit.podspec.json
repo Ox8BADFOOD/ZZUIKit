@@ -1,6 +1,6 @@
 {
   "name": "ZZUIKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "Lightest UIKit Extension，while strong enough.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Ox8BADFOOD/ZZUIKit",
@@ -13,15 +13,26 @@
   },
   "source": {
     "git": "https://github.com/Ox8BADFOOD/ZZUIKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "ZZUIKit/Classes/**/*",
+  "resource_bundles": {
+    "ZZUIKit": [
+      "ZZUIKit/Assets/*.png",
+      "ZZUIKit/Assets/*.xml",
+      "ZZUIKit/Assets/*.strings",
+      "ZZUIKit/Assets/*.lproj/*"
+    ]
+  },
   "dependencies": {
     "ZZUIKitEx": [
-      "~> 0.1.0"
+      "~> 0.1.1"
+    ],
+    "FlexLib": [
+      "~> 2.9.1"
     ]
   }
 }

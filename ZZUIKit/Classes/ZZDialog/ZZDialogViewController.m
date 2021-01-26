@@ -16,8 +16,8 @@
 
 @implementation ZZDialogViewController
 
--(instancetype)init{
-    if (self == [super init]) {
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    if (self == [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [self commonInit];
     }
     return self;
@@ -28,6 +28,10 @@
         [self commonInit];
     }
     return self;
+}
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
 }
 
 -(void)commonInit{

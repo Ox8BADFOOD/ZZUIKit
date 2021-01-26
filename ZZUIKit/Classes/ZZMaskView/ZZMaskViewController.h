@@ -6,11 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZZMaskView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZZMaskViewController : UIViewController
-
+-(instancetype)initWithBlurStyle:(UIBlurEffectStyle)style alpha:(CGFloat)alpha NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithMaskColor:(UIColor *)color  alpha:(CGFloat)alpha NS_DESIGNATED_INITIALIZER;
 @end
 
 NS_ASSUME_NONNULL_END

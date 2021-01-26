@@ -16,7 +16,7 @@
 @implementation ZZFlexLibPreviewPlugin
 
 - (void)pluginDidLoad{
-    [ZZFlexLibPreviewPlugin presentInVC:[ZZViewHierarchy ZZCurrentViewController]];
+    [FlexHttpVC presentInVC:[ZZViewHierarchy ZZCurrentViewController]];
     [[DoraemonManager shareInstance] hiddenHomeWindow];
 }
 

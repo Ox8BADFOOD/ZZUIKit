@@ -7,12 +7,6 @@
 
 #import "ZZDialog.h"
 #import <ZZUIKitEx/ZZUIKitEx.h>
-NSString const *ZZTitleKey = @"titel";
-NSString const *ZZTitleColorKey = @"titelColor";
-NSString const *ZZColorKey = @"color";
-NSString const *ZZFontKey = @"font";
-NSString const *ZZBgcKey = @"bgc";
-NSString const *ZZActionKey = @"action";
 
 
 @implementation ZZDialog
@@ -36,16 +30,18 @@ NSString const *ZZActionKey = @"action";
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         
         NSString *title = itemDic[ZZTitleKey];
-        [btn setTitle:title forState:UIControlStateNormal];
-        
         UIColor *titleColor = itemDic[ZZTitleColorKey] ? itemDic[ZZTitleColorKey]:zz_RGBHex(0x999999) ;
-        [btn setTitleColor:titleColor forState:UIControlStateNormal];
-        
         UIFont *font = itemDic[ZZFontKey] ? itemDic[ZZFontKey] : [UIFont systemFontOfSize:20];
-        btn.titleLabel.font = font;
+        UIColor *bgColor = itemDic[ZZBgcKey] ? itemDic[ZZBgcKey] : zz_RGBHex(0xFFFFFF);
+        UIImage *img = itemDic[ZZImgKey];
         
-        UIColor *color = itemDic[ZZBgcKey] ? itemDic[ZZBgcKey] : zz_RGBHex(0xFFFFFF);
-        [btn setBackgroundColor:color];
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn setTitleColor:titleColor forState:UIControlStateNormal];
+        btn.titleLabel.font = font;
+        [btn setBackgroundColor:bgColor];
+        if (img) {
+            [btn setImage:img forState:UIControlStateNormal];
+        }
         
         void(^click)(void) = itemDic[ZZActionKey];
         btn.zz_click(^(UIControl *control){

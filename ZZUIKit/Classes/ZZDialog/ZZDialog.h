@@ -6,14 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZZUIKitConst.h"
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSString const *ZZTitleKey;
-FOUNDATION_EXPORT NSString const *ZZTitleColorKey;
-FOUNDATION_EXPORT NSString const *ZZFontKey;
-FOUNDATION_EXPORT NSString const *ZZBgcKey;
-FOUNDATION_EXPORT NSString const *ZZActionKey;
 
 typedef NS_ENUM(NSUInteger, ZZDialogCancelPosition) {
     //一半在外边

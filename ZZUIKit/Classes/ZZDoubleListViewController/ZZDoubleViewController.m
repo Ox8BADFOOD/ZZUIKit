@@ -13,36 +13,24 @@
 
 @implementation ZZDoubleViewController
 
--(instancetype)initWithCoder:(NSCoder *)coder{
-    if (self == [super initWithCoder:coder]) {
-        [self commonInit];
-    }
-    return self;
-}
-
--(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    if (self == [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self commonInit];
-    }
-    return self;
-}
-
--(void)commonInit{
-    
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
--(void)setMainController:(UIViewController *)mainController{
-    _mainController = mainController;
+-(void)setDelegate:(id<ZZDoubleViewControllerContainer>)delegate{
+    _delegate = delegate;
+    //mainController
+    UIViewController *mainController = [delegate mainController];
     [self addChildViewController:mainController];
-}
-
--(void)setSubController:(UIViewController *)subController{
-    _subController = subController;
+    
+    mainController.view.frame = [delegate mainRect];
+    [self.view addSubview:mainController.view];
+    
+    [mainController didMoveToParentViewController:self];
+    
+    //subController
+    UIViewController *subController = [delegate subController];
     [self addChildViewController:subController];
+    
+    subController.view.frame = [delegate subRect];
+    [self.view addSubview:subController.view];
+    
+    [subController didMoveToParentViewController:self];
 }
 @end

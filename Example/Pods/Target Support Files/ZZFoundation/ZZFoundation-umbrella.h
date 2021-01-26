@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "ZZClass.h"
+#import "ZZWeakify.h"
 #import "NSArray+ZZEx.h"
 #import "NSMutableArray+ZZEx.h"
 #import "NSDate+ZZChineseCalendar.h"

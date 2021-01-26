@@ -8,18 +8,18 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-//UITableViewDelegate
 
-@protocol ZZDoubleListDelegate <NSObject>
+@class ZZDoubleViewController;
 
--(CGRect)listView:(ZZ)
-
+@protocol ZZDoubleViewControllerContainer <NSObject>
+-(UIViewController *)mainController;
+-(UIViewController *)subController;
+-(CGRect)mainRect;
+-(CGRect)subRect;
 @end
 
 @interface ZZDoubleViewController : UIViewController
-
-@property(nonatomic,strong) UIViewController *mainController;
-@property(nonatomic,strong) UIViewController *subController;
+@property(nonatomic,weak) id<ZZDoubleViewControllerContainer> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

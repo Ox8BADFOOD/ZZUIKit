@@ -1,39 +1,114 @@
 PODS:
+  - Aspects (1.4.1)
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - DoraemonKit/Core (3.0.6):
+    - FMDB
+    - GCDWebServer
+    - GCDWebServer/WebDAV
+    - GCDWebServer/WebUploader
+  - DoraemonKit/WithDatabase (3.0.6):
+    - DoraemonKit/Core
+    - YYDebugDatabase
+  - DoraemonKit/WithLoad (3.0.6):
+    - DoraemonKit/Core
+  - DoraemonKit/WithLogger (3.0.6):
+    - CocoaLumberjack
+    - DoraemonKit/Core
+  - DoraemonKit/WithMLeaksFinder (3.0.6):
+    - DoraemonKit/Core
+    - FBRetainCycleDetector
+  - FBRetainCycleDetector (0.1.4)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - FlexLib (2.9.1):
+    - FlexLib/standard (= 2.9.1)
+  - FlexLib/standard (2.9.1):
+    - FlexLib/standard/no-arc (= 2.9.1)
+    - Yoga (= 1.14.0)
+  - FlexLib/standard/no-arc (2.9.1):
+    - Yoga (= 1.14.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GCDWebServer/WebDAV (3.5.4):
+    - GCDWebServer/Core
+  - GCDWebServer/WebUploader (3.5.4):
+    - GCDWebServer/Core
   - Kiwi (3.0.0)
-  - ZZFoundation (0.1.2)
-  - ZZUIKit (0.1.0):
-    - ZZUIKitEx (~> 0.1.0)
-  - ZZUIKitEx (0.1.0):
-    - ZZFoundation (~> 0.1.2)
+  - Masonry (1.1.0)
+  - Yoga (1.14.0)
+  - YYDebugDatabase (2.1.0):
+    - FMDB
+    - GCDWebServer
+  - ZZFoundation (0.1.4):
+    - Aspects (~> 1.4.1)
+  - ZZUIKit (0.1.1):
+    - FlexLib (~> 2.9.1)
+    - ZZUIKitEx (~> 0.1.1)
+  - ZZUIKitEx (0.1.1):
+    - ZZFoundation (~> 0.1.3)
 
 DEPENDENCIES:
+  - DoraemonKit/Core (~> 3.0.4)
+  - DoraemonKit/WithDatabase (~> 3.0.4)
+  - DoraemonKit/WithLoad (~> 3.0.4)
+  - DoraemonKit/WithLogger (~> 3.0.4)
+  - DoraemonKit/WithMLeaksFinder (~> 3.0.4)
   - FBSnapshotTestCase
   - Kiwi
+  - Masonry (~> 1.1.0)
+  - ZZFoundation (from `/Users/max/Desktop/github/ZZLib/ZZFoundation`)
   - ZZUIKit (from `../`)
+  - ZZUIKitEx (from `/Users/max/Desktop/github/ZZLib/ZZUIKitEx`)
 
 SPEC REPOS:
   trunk:
+    - Aspects
+    - CocoaLumberjack
+    - DoraemonKit
+    - FBRetainCycleDetector
     - FBSnapshotTestCase
+    - FlexLib
+    - FMDB
+    - GCDWebServer
     - Kiwi
-    - ZZFoundation
-    - ZZUIKitEx
+    - Masonry
+    - Yoga
+    - YYDebugDatabase
 
 EXTERNAL SOURCES:
+  ZZFoundation:
+    :path: "/Users/max/Desktop/github/ZZLib/ZZFoundation"
   ZZUIKit:
     :path: "../"
+  ZZUIKitEx:
+    :path: "/Users/max/Desktop/github/ZZLib/ZZUIKitEx"
 
 SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  DoraemonKit: 919709427c30af94e265532a879ac41797d296d1
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FlexLib: c4e46d4bb628390ca8897835359703c5c71f59d5
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  ZZFoundation: 6a95397beaab8bf75160a004c21e8d2c7f769473
-  ZZUIKit: 08060a300c9999ceaa1868b10c6a50eb072db9a5
-  ZZUIKitEx: 09e391f15b127b5620e1dc447d23bd6f66d83b43
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+  YYDebugDatabase: e684a7f79fca2e3673a23347cefb822f911f3124
+  ZZFoundation: 91e9ee45372135b8fc4d10a7dd76cc6c164d4d51
+  ZZUIKit: f965fdff72d252552a8c8d5811ed750c9997ad4c
+  ZZUIKitEx: fe855f49303ec8e3b496abeb158056d6cde59d4f
 
-PODFILE CHECKSUM: cc4ee7a30a9e12975ccd373cd52edf786aed87e5
+PODFILE CHECKSUM: 688ddc3ddfb34557b5dd83017e1793dc2d912509
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

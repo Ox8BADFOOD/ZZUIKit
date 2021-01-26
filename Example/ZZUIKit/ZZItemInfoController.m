@@ -7,8 +7,11 @@
 //
 
 #import "ZZItemInfoController.h"
-
+#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZInfoItem.h>
+#import <Masonry/Masonry.h>
 @interface ZZItemInfoController ()
+@property (weak, nonatomic) IBOutlet UISwitch *switch1;
 
 @end
 
@@ -16,17 +19,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //frame
+    ZZInfoItem *item = [[ZZInfoItem alloc] initWithFrame:CGRectMake(50, NAV_STATUS_BAR_H() + 100,SCREEN_W()-100, 300)];
+    item.subItems = @[
+                    @{
+                        ZZTitleKey:@"你好啊",
+                        ZZBgcKey:@"#1FDCA1",
+                        ZZCornerRadius:@"4.5",
+                        ZZPadding:@"7.5/2.5/7.5/2.5",
+                    },
+                    @{
+                        ZZTitleKey:@"你好啊！",
+                        ZZBgcKey:@"#1FDCA1",
+                        ZZCornerRadius:@"4.5",
+                        ZZPadding:@"7.5/2.5/7.5/2.5",
+                    },
+                    @{
+                        ZZTitleKey:@"李银河2！",
+                        ZZBgcKey:@"#1FDCA1",
+                        ZZCornerRadius:@"4.5",
+                        ZZPadding:@"7.5/2.5/7.5/2.5",
+                    },
+                    @{
+                        ZZTitleKey:@"李银河3！",
+                        ZZBgcKey:@"#1FDCA1",
+                        ZZCornerRadius:@"4.5",
+                        ZZPadding:@"7.5/2.5/7.5/2.5",
+                    },
+                    @{
+                        ZZTitleKey:@"李银河4！",
+                        ZZBgcKey:@"#1FDCA1",
+                        ZZCornerRadius:@"4.5",
+                        ZZPadding:@"7.5/2.5/7.5/2.5",
+                    },
+     ];
+    item.title.text = @"穿越银河";
+    item.subtitle.text = @"2021";
+    [self.view addSubview:item];
+    [item layoutIfNeeded];
+    _switch1.zz_origin = CGPointMake(item.zz_x, item.zz_bottom);
+    
+//    masonry混用
+    UIView *bgView = [[UIView alloc] init];
+    bgView.backgroundColor = zz_RGBHex(0xff00ff);
+    [self.view insertSubview:bgView atIndex:0];
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(item).insets(UIEdgeInsetsMake(-10, -10, -10, -10));
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

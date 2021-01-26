@@ -7,12 +7,21 @@
 //
 
 #import "ZZAppDelegate.h"
-
+#import <ZZUIKit/FlexHttpVC.h>
+#import <FlexLib/FlexLib.h>
+#import <DoraemonKit/DoraemonManager.h>
 @implementation ZZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    FlexRestorePreviewSetting();
+    NSString* path = [[NSBundle mainBundle]pathForResource:@"system" ofType:@"style"];
+    [[FlexStyleMgr instance]loadClassStyle:path];
+    
     // Override point for customization after application launch.
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"预览xml" icon:@"doraemon_file_2" desc:@"xml预览" pluginName:@"ZZFlexLibPreviewPlugin" atModule:@"业务专区"];
+    [[DoraemonManager shareInstance] installWithPid:@"productId"];//productId为在“平台端操作指南”中申请的产品id
+    
     return YES;
 }
 

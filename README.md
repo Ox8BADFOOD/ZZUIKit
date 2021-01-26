@@ -9,20 +9,15 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## How to use ZZUIKit
 
-## Installation
+- Installation with CocoaPods：`pod 'ZZUIKit', '~> 0.1.4'`
 
-ZZUIKit is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'ZZUIKit'
-```
+## The Class Structure Chart
 
 ## Author
 
-bymiracles@163.com, 350991881@qq.com
+350991881@qq.com
 
 ## License
 

@@ -7,7 +7,7 @@
 //
 
 #import "ZZViewController.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 #import <ZZUIKit/ZZDialog.h>
 #import <ZZUIKit/ZZDialogViewController.h>
 #import <ZZUIKit/ZZTextWidget.h>
@@ -26,8 +26,8 @@ CGFloat const handleBarH = 200;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.dialog.cancelBtn = [UIButton buttonWithType:UIButtonTypeClose];
-    self.dialogVC.dialog.cancelBtn = [UIButton buttonWithType:UIButtonTypeClose];
+    self.dialog.cancelBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    self.dialogVC.dialog.cancelBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
     self.dialogVC.blurStyle = UIBlurEffectStyleLight;
     self.textWidget.maxLength = 10;
     self.textWidget.placeholder = @"请输入内容";
@@ -71,8 +71,8 @@ CGFloat const handleBarH = 200;
    
 }
 - (IBAction)deleteBtnShow:(UISwitch *)sender {
-    _dialog.cancelBtn = sender.on ? [UIButton buttonWithType:UIButtonTypeClose] : nil;
-    _dialogVC.dialog.cancelBtn = sender.on ? [UIButton buttonWithType:UIButtonTypeClose] : nil;
+    _dialog.cancelBtn = sender.on ? [UIButton buttonWithType:UIButtonTypeContactAdd] : nil;
+    _dialogVC.dialog.cancelBtn = sender.on ? [UIButton buttonWithType:UIButtonTypeContactAdd] : nil;
 }
 
 - (IBAction)blurOrMask:(UISwitch *)sender {

@@ -7,10 +7,9 @@
 //
 
 #import "ZZSOTableViewController1.h"
-#import <ZZUIKit/ZZTransitioningDelegate.h>
-#import "ZZUIKitEx/ZZUIKitEx.h"
+#import <ZZUIKit/ZZUIKitEx.h>
 @interface ZZSOTableViewController1 ()
-@property (nonatomic, strong) ZZTransitioningDelegate *tDelegate;
+
 @end
 
 @implementation ZZSOTableViewController1

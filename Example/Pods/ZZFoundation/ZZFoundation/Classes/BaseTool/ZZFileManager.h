@@ -1,15 +1,15 @@
 //
-//  NSFileManager+ZZEx.h
-//  Kiwi
+//  ZZFileManager.h
+//  Aspects
 //
-//  Created by Max on 2020/12/29.
+//  Created by Max on 2021/1/26.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSFileManager (ZZEx)
+@interface ZZFileManager : NSObject
 /// 创建文件夹
 /// @param path 完整的文件夹路径
 /// @return 返回创建结果

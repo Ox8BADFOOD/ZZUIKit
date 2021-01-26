@@ -8,7 +8,7 @@
 
 #import "ZZStackViewController.h"
 #import <ZZUIKit/ZZTextImgView.h>
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 #import <Masonry/Masonry.h>
 @interface ZZStackViewController ()
 @end

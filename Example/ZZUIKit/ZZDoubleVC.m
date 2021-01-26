@@ -7,7 +7,7 @@
 //
 
 #import "ZZDoubleVC.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 @interface ZZDoubleVC ()<ZZDoubleViewControllerContainer,UITableViewDelegate,UITableViewDataSource>
 
 @end

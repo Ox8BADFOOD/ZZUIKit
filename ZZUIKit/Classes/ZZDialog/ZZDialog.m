@@ -6,7 +6,7 @@
 //
 
 #import "ZZDialog.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 
 
 @implementation ZZDialog

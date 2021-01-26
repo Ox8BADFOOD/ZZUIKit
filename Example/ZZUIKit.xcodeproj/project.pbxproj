@@ -12,6 +12,7 @@
 		5046870D25AFE82A00F6139F /* ZZStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046870C25AFE82A00F6139F /* ZZStackViewController.m */; };
 		50558E8E25B075CD007F26BE /* ZZDoubleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50558E8D25B075CD007F26BE /* ZZDoubleVC.m */; };
 		505E622525B1840600A3BB42 /* ZZSOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505E622425B1840600A3BB42 /* ZZSOViewController.m */; };
+		507E589725C00EA00028E68F /* ZZExViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507E589525C00EA00028E68F /* ZZExViewController.m */; };
 		508510F925B6A91D00E2E58C /* ZZItemInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508510F825B6A91D00E2E58C /* ZZItemInfoController.m */; };
 		5097D24025B1A17100644FF5 /* ZZSOTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5097D23F25B1A17100644FF5 /* ZZSOTableViewController1.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 		50558E8D25B075CD007F26BE /* ZZDoubleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZDoubleVC.m; sourceTree = "<group>"; };
 		505E622325B1840600A3BB42 /* ZZSOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZSOViewController.h; sourceTree = "<group>"; };
 		505E622425B1840600A3BB42 /* ZZSOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZSOViewController.m; sourceTree = "<group>"; };
+		507E589525C00EA00028E68F /* ZZExViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZExViewController.m; sourceTree = "<group>"; };
+		507E589625C00EA00028E68F /* ZZExViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZExViewController.h; sourceTree = "<group>"; };
 		508510F725B6A91D00E2E58C /* ZZItemInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZItemInfoController.h; sourceTree = "<group>"; };
 		508510F825B6A91D00E2E58C /* ZZItemInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZItemInfoController.m; sourceTree = "<group>"; };
 		5097D23E25B1A17100644FF5 /* ZZSOTableViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZSOTableViewController1.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				50001EF325BF260000ACBB42 /* ZZFlexLibPreviewPlugin.h */,
 				50001EF425BF260000ACBB42 /* ZZFlexLibPreviewPlugin.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				507E589625C00EA00028E68F /* ZZExViewController.h */,
+				507E589525C00EA00028E68F /* ZZExViewController.m */,
 				6003F5A5195388D20070C39A /* ZZViewController.h */,
 				6003F5A6195388D20070C39A /* ZZViewController.m */,
 				50558E8C25B075CD007F26BE /* ZZDoubleVC.h */,
@@ -337,17 +342,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZZUIKit_Tests/Pods-ZZUIKit_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
-				"${BUILT_PRODUCTS_DIR}/ZZFoundation/ZZFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/ZZUIKitEx/ZZUIKitEx.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZUIKitEx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kiwi.framework",
 			);
@@ -398,7 +397,6 @@
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/ZZFoundation/ZZFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/ZZUIKit/ZZUIKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ZZUIKitEx/ZZUIKitEx.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -415,7 +413,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZUIKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZUIKitEx.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				505E622525B1840600A3BB42 /* ZZSOViewController.m in Sources */,
+				507E589725C00EA00028E68F /* ZZExViewController.m in Sources */,
 				6003F59E195388D20070C39A /* ZZAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZZViewController.m in Sources */,
 				50558E8E25B075CD007F26BE /* ZZDoubleVC.m in Sources */,

@@ -1,13 +1,13 @@
 //
-//  NSFileManager+ZZEx.m
-//  Kiwi
+//  ZZFileManager.m
+//  Aspects
 //
-//  Created by Max on 2020/12/29.
+//  Created by Max on 2021/1/26.
 //
 
-#import "NSFileManager+ZZEx.h"
+#import "ZZFileManager.h"
 
-@implementation NSFileManager (ZZEx)
+@implementation ZZFileManager
 #pragma mark -- 创建
 +(BOOL)ZZCreatDir:(NSString *)path{
     if (path.length==0) {

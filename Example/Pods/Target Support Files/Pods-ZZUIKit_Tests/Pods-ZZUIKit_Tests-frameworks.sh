@@ -175,16 +175,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZZFoundation/ZZFoundation.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZZUIKitEx/ZZUIKitEx.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZZFoundation/ZZFoundation.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZZUIKitEx/ZZUIKitEx.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework"
 fi

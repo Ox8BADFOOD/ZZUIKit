@@ -6,8 +6,8 @@
 //
 
 #import "ZZSOView.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
-#import <ZZUIKitEx/UIButton+ZZAnima.h>
+#import <ZZUIKit/ZZUIKitEx.h>
+//#import <ZZUIKit/UIButton+ZZAnima.h>
 #import <Aspects/Aspects.h>
 
 @interface ZZSOView()

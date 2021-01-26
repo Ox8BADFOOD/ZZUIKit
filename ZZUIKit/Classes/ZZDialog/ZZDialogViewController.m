@@ -6,7 +6,7 @@
 //
 
 #import "ZZDialogViewController.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 #import "ZZMaskView.h"
 
 @interface ZZDialogViewController ()<ZZDialogContenDelegate,ZZDialogHandleDelegate>

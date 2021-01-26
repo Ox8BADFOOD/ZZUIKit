@@ -7,7 +7,7 @@
 //
 
 #import "ZZItemInfoController.h"
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 #import <ZZUIKit/ZZInfoItem.h>
 #import <Masonry/Masonry.h>
 @interface ZZItemInfoController ()

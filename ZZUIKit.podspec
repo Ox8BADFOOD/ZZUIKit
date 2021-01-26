@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ZZUIKitEx', '~> 0.1.1'
+  s.dependency 'ZZFoundation', '~> 0.1.4'
   s.dependency 'FlexLib', '~> 2.9.1'
 end

@@ -8,7 +8,7 @@
 
 #import "ZZSOViewController.h"
 #import <ZZUIKit/ZZSOView.h>
-#import <ZZUIKitEx/ZZUIKitEx.h>
+#import <ZZUIKit/ZZUIKitEx.h>
 #import <ZZUIKit/ZZUIKitConst.h>
 #import "ZZSOTableViewController1.h"
 #import <ZZUIKit/ZZMaskViewController.h>

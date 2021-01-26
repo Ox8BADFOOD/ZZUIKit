@@ -50,11 +50,9 @@ PODS:
     - GCDWebServer
   - ZZFoundation (0.1.4):
     - Aspects (~> 1.4.1)
-  - ZZUIKit (0.1.1):
+  - ZZUIKit (0.1.0):
     - FlexLib (~> 2.9.1)
-    - ZZUIKitEx (~> 0.1.1)
-  - ZZUIKitEx (0.1.1):
-    - ZZFoundation (~> 0.1.3)
+    - ZZFoundation (~> 0.1.4)
 
 DEPENDENCIES:
   - DoraemonKit/Core (~> 3.0.4)
@@ -65,9 +63,7 @@ DEPENDENCIES:
   - FBSnapshotTestCase
   - Kiwi
   - Masonry (~> 1.1.0)
-  - ZZFoundation (from `/Users/max/Desktop/github/ZZLib/ZZFoundation`)
   - ZZUIKit (from `../`)
-  - ZZUIKitEx (from `/Users/max/Desktop/github/ZZLib/ZZUIKitEx`)
 
 SPEC REPOS:
   trunk:
@@ -83,14 +79,11 @@ SPEC REPOS:
     - Masonry
     - Yoga
     - YYDebugDatabase
+    - ZZFoundation
 
 EXTERNAL SOURCES:
-  ZZFoundation:
-    :path: "/Users/max/Desktop/github/ZZLib/ZZFoundation"
   ZZUIKit:
     :path: "../"
-  ZZUIKitEx:
-    :path: "/Users/max/Desktop/github/ZZLib/ZZUIKitEx"
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
@@ -106,9 +99,8 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YYDebugDatabase: e684a7f79fca2e3673a23347cefb822f911f3124
   ZZFoundation: 91e9ee45372135b8fc4d10a7dd76cc6c164d4d51
-  ZZUIKit: f965fdff72d252552a8c8d5811ed750c9997ad4c
-  ZZUIKitEx: fe855f49303ec8e3b496abeb158056d6cde59d4f
+  ZZUIKit: 7b4ccb1c8f65bdd32088ef8389c3c62d1262c7f8
 
-PODFILE CHECKSUM: 688ddc3ddfb34557b5dd83017e1793dc2d912509
+PODFILE CHECKSUM: b591862c0c3e3bbd4281a88e51e9008f44322a33
 
 COCOAPODS: 1.10.1

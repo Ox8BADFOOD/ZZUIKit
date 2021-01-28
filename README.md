@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## How to use ZZUIKit
 
-- Installation with CocoaPods：`pod 'ZZUIKit', '~> 0.1.4'`
+- Installation with CocoaPods：`pod 'ZZUIKit', '~> 0.1.1'`
 
 ## The Class Structure Chart
 

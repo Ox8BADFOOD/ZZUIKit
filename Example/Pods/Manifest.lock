@@ -1,25 +1,12 @@
 PODS:
   - Aspects (1.4.1)
-  - CocoaLumberjack (3.7.0):
-    - CocoaLumberjack/Core (= 3.7.0)
-  - CocoaLumberjack/Core (3.7.0)
+  - DoraemonKit (3.0.6):
+    - DoraemonKit/Core (= 3.0.6)
   - DoraemonKit/Core (3.0.6):
     - FMDB
     - GCDWebServer
     - GCDWebServer/WebDAV
     - GCDWebServer/WebUploader
-  - DoraemonKit/WithDatabase (3.0.6):
-    - DoraemonKit/Core
-    - YYDebugDatabase
-  - DoraemonKit/WithLoad (3.0.6):
-    - DoraemonKit/Core
-  - DoraemonKit/WithLogger (3.0.6):
-    - CocoaLumberjack
-    - DoraemonKit/Core
-  - DoraemonKit/WithMLeaksFinder (3.0.6):
-    - DoraemonKit/Core
-    - FBRetainCycleDetector
-  - FBRetainCycleDetector (0.1.4)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -45,21 +32,14 @@ PODS:
   - Kiwi (3.0.0)
   - Masonry (1.1.0)
   - Yoga (1.14.0)
-  - YYDebugDatabase (2.1.0):
-    - FMDB
-    - GCDWebServer
   - ZZFoundation (0.1.4):
     - Aspects (~> 1.4.1)
-  - ZZUIKit (0.1.0):
+  - ZZUIKit (0.1.1):
     - FlexLib (~> 2.9.1)
     - ZZFoundation (~> 0.1.4)
 
 DEPENDENCIES:
-  - DoraemonKit/Core (~> 3.0.4)
-  - DoraemonKit/WithDatabase (~> 3.0.4)
-  - DoraemonKit/WithLoad (~> 3.0.4)
-  - DoraemonKit/WithLogger (~> 3.0.4)
-  - DoraemonKit/WithMLeaksFinder (~> 3.0.4)
+  - DoraemonKit (~> 3.0.6)
   - FBSnapshotTestCase
   - Kiwi
   - Masonry (~> 1.1.0)
@@ -68,9 +48,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Aspects
-    - CocoaLumberjack
     - DoraemonKit
-    - FBRetainCycleDetector
     - FBSnapshotTestCase
     - FlexLib
     - FMDB
@@ -78,7 +56,6 @@ SPEC REPOS:
     - Kiwi
     - Masonry
     - Yoga
-    - YYDebugDatabase
     - ZZFoundation
 
 EXTERNAL SOURCES:
@@ -87,9 +64,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DoraemonKit: 919709427c30af94e265532a879ac41797d296d1
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FlexLib: c4e46d4bb628390ca8897835359703c5c71f59d5
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -97,10 +72,9 @@ SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
-  YYDebugDatabase: e684a7f79fca2e3673a23347cefb822f911f3124
   ZZFoundation: 91e9ee45372135b8fc4d10a7dd76cc6c164d4d51
-  ZZUIKit: 7b4ccb1c8f65bdd32088ef8389c3c62d1262c7f8
+  ZZUIKit: 1f7168bc09bd0f6ec243ad9201f701750454e042
 
-PODFILE CHECKSUM: b591862c0c3e3bbd4281a88e51e9008f44322a33
+PODFILE CHECKSUM: 88b54d7bf9c2a43db0a8c7ef75c8fc4420c0e15d
 
 COCOAPODS: 1.10.1

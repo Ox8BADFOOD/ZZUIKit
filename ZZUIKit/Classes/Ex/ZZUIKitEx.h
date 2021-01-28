@@ -8,9 +8,7 @@
 #ifndef ZZUIKitEx_h
 #define ZZUIKitEx_h
 
-#import "ZZExFrame.h"
-
-#import "ZZColor.h"
+#import "ZZUIKitTools.h"
 #import "UIView+ZZFrame.h"
 #import "UIView+ZZEx.h"
 #import "UIView+ZZShot.h"

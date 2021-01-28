@@ -7,7 +7,7 @@
 //
 
 #import "UITabBarController+ZZEx.h"
-#import "ZZExFrame.h"
+#import "ZZFrame.h"
 
 
 @implementation UITabBarController (ZZEx)

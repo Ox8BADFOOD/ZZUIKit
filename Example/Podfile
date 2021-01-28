@@ -6,12 +6,7 @@ target 'ZZUIKit_Example' do
   pod 'ZZUIKit', :path => '../'
   pod 'Masonry', '~> 1.1.0'
 #  pod 'ZZFoundation',:path => '/Users/max/Desktop/github/ZZLib/ZZFoundation'
-#  pod 'ZZUIKitEx',:path => '/Users/max/Desktop/github/ZZLib/ZZUIKitEx'
-  pod 'DoraemonKit/Core', '~> 3.0.4'
-  pod 'DoraemonKit/WithLoad', '~> 3.0.4'
-  pod 'DoraemonKit/WithLogger', '~> 3.0.4'
-  pod 'DoraemonKit/WithDatabase', '~> 3.0.4'
-  pod 'DoraemonKit/WithMLeaksFinder', '~> 3.0.4'
+  pod 'DoraemonKit', '~> 3.0.6'
   
   target 'ZZUIKit_Tests' do
     inherit! :search_paths

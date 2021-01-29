@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZZUIKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.0'
   s.summary          = 'Lightest UIKit Extension，while strong enough.'
 
 # This description is used to generate tags and improve search results.
@@ -30,10 +30,26 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'ZZUIKit/Classes/**/*'
+  s.source_files =  [
+    'ZZUIKit/Classes/*',
+    'ZZUIKit/Classes/Const/*',
+    'ZZUIKit/Classes/Ex/**/*',
+    'ZZUIKit/Classes/Ex/*',
+    'ZZUIKit/Classes/Tools/*',
+    'ZZUIKit/Classes/Tools/*',
+    'ZZUIKit/Classes/ZZItemInfo/*',
+    'ZZUIKit/Classes/ZZListTitle/*',
+    'ZZUIKit/Classes/FlexLibPreview/*',
+    'ZZUIKit/Classes/ZZSOController/*',
+    'ZZUIKit/Classes/ZZDoubleListViewController/*',
+    'ZZUIKit/Classes/ZZMaskView/*',
+    'ZZUIKit/Classes/ZZDialog/*',
+    'ZZUIKit/Classes/ZZTextImgView/*',
+    'ZZUIKit/Classes/ZZTextWidget/*',
+    ]
   
   s.resource_bundles = {
-    'ZZUIKit' => ['ZZUIKit/Assets/*.png','ZZUIKit/Assets/*.xml','ZZUIKit/Assets/*.strings','ZZUIKit/Assets/*.lproj/*']
+    'ZZUIKit' => ['ZZUIKit/Assets/*.png','ZZUIKit/Assets/XML/*.xml','ZZUIKit/Assets/*.strings','ZZUIKit/Assets/*.lproj/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

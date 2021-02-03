@@ -22,3 +22,5 @@ FOUNDATION_EXPORT CGFloat BOTTOM_PADDING(void);
 FOUNDATION_EXPORT CGFloat zz_adapt(CGFloat value);
 //按照给定比例缩放
 FOUNDATION_EXPORT CGFloat zz_adaptRatio(CGFloat origin,CGFloat ratio);
+
+FOUNDATION_EXPORT CGFloat zz_screenOriginY(void);

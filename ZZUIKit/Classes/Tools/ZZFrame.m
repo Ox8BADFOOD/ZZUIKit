@@ -6,6 +6,7 @@
 //
 
 #import "ZZFrame.h"
+#import <ZZUIKit/ZZUIKitTools.h>
 
 CGFloat SCREEN_H(){
     return [UIScreen mainScreen].bounds.size.height;
@@ -53,4 +54,9 @@ CGFloat zz_adapt(CGFloat value){
 
 CGFloat zz_adaptRatio(CGFloat origin,CGFloat ratio){
     return origin * ratio;
+}
+
+//屏幕y0点
+CGFloat zz_screenOriginY(void){
+    return [ZZViewHierarchy ZZCurrentViewController].navigationController.navigationBar.translucent ? NAV_STATUS_BAR_H() : 0;
 }

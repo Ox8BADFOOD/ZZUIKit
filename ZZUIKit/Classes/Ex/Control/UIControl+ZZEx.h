@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^ZZControlEventsBlock)(UIControl *_Nullable);
+typedef void(^ZZControlEventsBlock)(__kindof UIControl *_Nullable);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIControl (ZZEx)

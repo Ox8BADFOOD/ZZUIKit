@@ -125,4 +125,99 @@ static void *zz_bgcKey = &zz_bgcKey;
 }
 
 
++ (UIButton *(^)(UIButtonType))ZZButton {
+    return ^UIButton *(UIButtonType type) {
+        
+        return [UIButton buttonWithType:type];
+    };
+}
+
+- (UIButton *(^)(NSAttributedString *title, UIControlState status))ZZAttributedTitle {
+    return ^UIButton *(NSAttributedString *titleName, UIControlState status) {
+        [self setAttributedTitle:titleName forState:status];
+        return self;
+    };
+}
+
+
+- (UIButton *(^)(NSString *title, UIControlState status))ZZTitle {
+    return ^UIButton *(NSString *titleName, UIControlState status) {
+        [self setTitle:titleName forState:status];
+        return self;
+    };
+}
+
+
+- (UIButton *(^)(UIImage *backgroundImage,UIControlState status))ZZBgImage {
+    return ^UIButton *(UIImage *backgroundImage,UIControlState status){
+        [self setBackgroundImage:backgroundImage forState:status];
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIColor * backgroundColor))ZZBgc {
+    return ^UIButton *(UIColor * bgColor){
+        [self setBackgroundColor:bgColor];
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIColor *borderColor,CGFloat borderWidth))ZZBorder {
+
+    return ^UIButton *(UIColor *borderColor,CGFloat borderWidth) {
+        self.layer.borderColor = borderColor.CGColor;
+        self.layer.borderWidth = borderWidth;
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIColor *))ZZTitleColor {
+   return ^UIButton *(UIColor *titleColor){
+        [self setTitleColor:titleColor forState:UIControlStateNormal];
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIColor *,UIControlState))ZZTitleColor2{
+   return ^UIButton *(UIColor *titleColor,UIControlState status){
+        [self setTitleColor:titleColor forState:status];
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIImage *, UIControlState))ZZShowImage {
+    return ^UIButton * (UIImage *currentImage,UIControlState status) {
+        [self setImage:currentImage forState:status];
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIViewContentMode mode))ZZShowImageContentMode{
+    return ^UIButton * (UIViewContentMode mode) {
+        self.imageView.contentMode = mode;
+        return self;
+    };
+}
+
+- (UIButton *(^)(CGRect frame))ZZSetFrame{
+    return ^UIButton *(CGRect frame){
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIButton *(^)(UIFont *font))ZZFont{
+    return ^UIButton *(UIFont *font){
+        self.titleLabel.font = font;
+        return self;
+    };
+}
+
+- (UIButton *(^)(CGFloat))ZZCornerRadius {
+    return ^UIButton *(CGFloat radius) {
+        self.layer.cornerRadius = radius;
+        self.layer.masksToBounds = true;
+        return self;
+    };
+}
 @end

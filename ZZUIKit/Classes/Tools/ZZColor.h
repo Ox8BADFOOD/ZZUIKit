@@ -10,6 +10,7 @@
 #ifndef ZZColor_h
 #define ZZColor_h
 
+FOUNDATION_EXPORT UIColor* zz_RGBA(float r,float g,float b,float a);
 /// rgb初始化Color
 FOUNDATION_EXPORT UIColor* zz_RGB(float r,float g,float b);
 

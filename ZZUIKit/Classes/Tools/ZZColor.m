@@ -8,6 +8,10 @@
 
 #import "ZZColor.h"
 
+UIColor* zz_RGBA(float r,float g,float b,float a){
+    return [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:a];
+}
+
 UIColor* zz_RGB(float r,float g,float b){
     return [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0];
 }

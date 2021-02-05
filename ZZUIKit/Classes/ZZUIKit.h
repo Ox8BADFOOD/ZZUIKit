@@ -29,5 +29,5 @@
 
 #import "ZZTextWidget.h"
 
-#import <ZZFoundation/ZZFoundation.h>
+
 #endif /* ZZUIKit_h */

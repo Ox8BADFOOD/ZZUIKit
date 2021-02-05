@@ -33,6 +33,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(void)zz_recursionClearSubviewType:(Class)class;
+
+/**************************************/
+
++ (UIView *(^)(void))ZZNew;
+/**
+从nib加载图片
+ @return self
+ */
++ (UIView *(^)(NSString *))ZZLoadNibName;
++ (UIView *(^)(CGRect))ZZFrameInit;
+- (UIView *(^)(CGRect))ZZSetFrame;
+- (UIView *(^)(UIColor *))ZZBgc;
+- (UIView *(^)(UIColor *))ZZBorderColor;
+- (UIView *(^)(bool))ZZClip;
+- (UIView *(^)(CGFloat))ZZBorderWidth;
+- (UIView *(^)(CGFloat))ZZCornerRadius;
+-(UIView *(^)(BOOL))ZZUserInteraction;
+-(UIView *(^)(BOOL))ZZAutoresizesSubviews;
+-(UIView *(^)(CGFloat))ZZAlpha;
+-(UIView *(^)(BOOL))ZZHidden;
+-(UIView *(^)(UIView *))ZZMaskView;
+-(UIView *(^)(void))ZZClearSubview;
+
+-(UIView *(^)(UIView *))ZZAddSubview;
+-(UIView *(^)(UIView *))ZZBringSubviewToFront;
 @end
 
 NS_ASSUME_NONNULL_END

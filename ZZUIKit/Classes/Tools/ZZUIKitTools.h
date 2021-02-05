@@ -9,7 +9,7 @@
 #define ZZUITools_h
 
 #import "ZZFont.h"
-#import "ZZColor.h"
+#import "ZZUIKit/ZZColor.h"
 #import "ZZViewHierarchy.h"
 #import "ZZFrame.h"
 #endif /* ZZUITools_h */

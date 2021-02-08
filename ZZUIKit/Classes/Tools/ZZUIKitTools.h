@@ -12,4 +12,5 @@
 #import "ZZUIKit/ZZColor.h"
 #import "ZZViewHierarchy.h"
 #import "ZZFrame.h"
+#import "ZZViewProtocol.h"
 #endif /* ZZUITools_h */

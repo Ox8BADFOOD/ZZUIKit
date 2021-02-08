@@ -5,7 +5,7 @@
 //  Created by Max on 2021/1/13.
 //
 
-#import <UIKit/UIKit.h>
+#import <ZZUIKit/ZZViewController.h>
 #import "ZZDialog.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ZZDialogViewController : UIViewController
+@interface ZZDialogViewController : ZZViewController
 @property(nonatomic,strong,readonly) ZZDialog *dialog;
 @property(nonatomic,weak,nullable) id<ZZDialogDelegate> dialogDelegate;
 @property(nonatomic,weak,nullable) id<ZZDialogHandleDelegate> handleDelegate;

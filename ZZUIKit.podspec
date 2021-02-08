@@ -46,6 +46,7 @@ TODO: Add long description of the pod here.
     'ZZUIKit/Classes/ZZDialog/*',
     'ZZUIKit/Classes/ZZTextImgView/*',
     'ZZUIKit/Classes/ZZTextWidget/*',
+    'ZZUIKit/Classes/ZZViewController/*',
     ]
   
   s.resource_bundles = {

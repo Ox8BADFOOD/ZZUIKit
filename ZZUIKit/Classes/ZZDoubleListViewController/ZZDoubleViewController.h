@@ -5,7 +5,7 @@
 //  Created by Max on 2021/1/14.
 //
 
-#import <UIKit/UIKit.h>
+#import <ZZUIKit/ZZViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(CGRect)subRect;
 @end
 
-@interface ZZDoubleViewController : UIViewController
+@interface ZZDoubleViewController : ZZViewController
 @property(nonatomic,weak) id<ZZDoubleViewControllerContainer> delegate;
 @end
 

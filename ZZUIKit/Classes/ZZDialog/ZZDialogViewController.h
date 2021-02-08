@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZZDialogDelegate <ZZDialogContenDelegate>
-@optional
 -(CGRect)preferredFrameForDialog:(ZZDialog *)dialog;
 
 @end

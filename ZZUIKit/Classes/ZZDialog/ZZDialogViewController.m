@@ -9,7 +9,7 @@
 #import "ZZUIKitEx.h"
 #import "ZZMaskView.h"
 
-@interface ZZDialogViewController ()<ZZDialogContenDelegate,ZZDialogHandleDelegate>
+@interface ZZDialogViewController ()<ZZDialogDelegate,ZZDialogHandleDelegate>
 @property(nonatomic,strong,readwrite) ZZDialog *dialog;
 @property(nonatomic,strong) ZZMaskView *maskView;
 @end
@@ -18,14 +18,16 @@
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self == [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self commonInit];
+        self.definesPresentationContext = true;
+        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }
     return self;
 }
 
 -(instancetype)initWithCoder:(NSCoder *)coder{
     if (self == [super initWithCoder:coder]) {
-        [self commonInit];
+        self.definesPresentationContext = true;
+        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }
     return self;
 }
@@ -34,17 +36,16 @@
     [super awakeFromNib];
 }
 
--(void)commonInit{
-    self.definesPresentationContext = true;
-    self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    self.maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
-    __weak typeof(self) weakSelf = self;
-    [self.view insertSubview:self.maskView atIndex:0];
-    self.maskView.zz_tapAction(^(UIView *v){
-        [weakSelf.dialog dismiss];
-    });
-    [self.view addSubview:self.dialog];
+-(void)viewDidLoad{
+   self.maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
+   __weak typeof(self) weakSelf = self;
+   [self.view insertSubview:self.maskView atIndex:0];
+   self.maskView.zz_tapAction(^(UIView *v){
+       [weakSelf.dialog dismiss];
+   });
+   [self.view addSubview:self.dialog];
 }
+
 
 #pragma mark -- set
 - (void)setMaskColor:(UIColor *)maskColor{

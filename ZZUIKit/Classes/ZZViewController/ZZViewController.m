@@ -13,11 +13,6 @@
 
 @implementation ZZViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 -(void)dealloc{
     NSLog(@"%s",__FUNCTION__);
 }

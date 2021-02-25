@@ -27,6 +27,7 @@
 #import "UILabel+ZZPadding.h"
 #import "UILabel+ZZStroke.h"
 
+#import "UIViewController+ZZEx.h"
 #import <ZZFoundation/ZZFoundation.h>
 
 #endif /* ZZUIKitEx_h */

@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) ZZControlEventsBlock zz_eventBlock;
 // 添加触发事件
 - (UIControl *(^)(ZZControlEventsBlock block,UIControlEvents events))zz_eventFire;
+
+-(void)zz_fire;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -24,6 +24,7 @@
 #import "UILabel+ZZPadding.h"
 #import "UILabel+ZZStroke.h"
 #import "UITabBarController+ZZEx.h"
+#import "UIView+ZZCornerRadius.h"
 #import "UIView+ZZEx.h"
 #import "UIView+ZZFrame.h"
 #import "UIView+ZZGesture.h"
@@ -34,6 +35,7 @@
 #import "ZZFrame.h"
 #import "ZZUIKitTools.h"
 #import "ZZViewHierarchy.h"
+#import "ZZViewProtocol.h"
 #import "ZZInfoItem.h"
 #import "ZZListTitle.h"
 #import "FlexHttpVC.h"
@@ -49,6 +51,7 @@
 #import "ZZDialogViewController.h"
 #import "ZZTextImgView.h"
 #import "ZZTextWidget.h"
+#import "ZZViewController.h"
 
 FOUNDATION_EXPORT double ZZUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZZUIKitVersionString[];

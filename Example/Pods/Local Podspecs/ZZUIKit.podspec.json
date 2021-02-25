@@ -33,7 +33,8 @@
     "ZZUIKit/Classes/ZZMaskView/*",
     "ZZUIKit/Classes/ZZDialog/*",
     "ZZUIKit/Classes/ZZTextImgView/*",
-    "ZZUIKit/Classes/ZZTextWidget/*"
+    "ZZUIKit/Classes/ZZTextWidget/*",
+    "ZZUIKit/Classes/ZZViewController/*"
   ],
   "resource_bundles": {
     "ZZUIKit": [

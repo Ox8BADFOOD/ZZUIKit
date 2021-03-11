@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UIView name="wrapper" attr=""
+    layout="flex:1,flexDirection:row,justifyContent:flex-start,alignItems:center">
+    <UIImageView name="imgV" attr="source:," layout="width:20,aspectRatio:1,margin:0/0/10/0"/>
+    <UILabel name="title" layout="flex:1," attr="font:PingFangSC-Regular|15,color:#333333,text:选项"/>
+</UIView>

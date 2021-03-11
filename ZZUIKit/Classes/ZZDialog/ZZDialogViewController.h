@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ZZDialogViewController : ZZViewController
+@interface ZZDialogViewController : ZZViewController<ZZDialogDelegate,ZZDialogHandleDelegate>
 @property(nonatomic,strong,readonly) ZZDialog *dialog;
 @property(nonatomic,weak,nullable) id<ZZDialogDelegate> dialogDelegate;
 @property(nonatomic,weak,nullable) id<ZZDialogHandleDelegate> handleDelegate;

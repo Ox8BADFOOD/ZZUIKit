@@ -26,7 +26,9 @@
     _handleDelegate = handleDelegate;
     _handleView.frame = [handleDelegate preferredFrameForHandleInDialog:self];
     NSArray *dicArr = [handleDelegate itemsForHandleInDialog:self];
+//    @weakify(self);
     [dicArr enumerateObjectsUsingBlock:^(NSDictionary *itemDic, NSUInteger idx, BOOL * _Nonnull stop) {
+//        @strongify(self);
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         
         NSString *title = itemDic[ZZTitleKey];
@@ -44,6 +46,7 @@
         }
         
         void(^click)(void) = itemDic[ZZActionKey];
+        
         btn.zz_click(^(UIControl *control){
             click();
         });

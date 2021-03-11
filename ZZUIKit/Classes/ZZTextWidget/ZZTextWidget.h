@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) NSInteger maxLength;//最大长度
 @property (strong, nonatomic) UILabel *placeholderLabel;
 @property (strong, nonatomic) UILabel *wordNumLabel;
+@property (copy, nonatomic) NSString *wordNumFormat;
 
 //文字输入
 @property (copy, nonatomic) void(^didChangeText)(ZZTextWidget *textView);

@@ -9,7 +9,7 @@
 #import "ZZUIKitEx.h"
 #import "ZZMaskView.h"
 
-@interface ZZDialogViewController ()<ZZDialogDelegate,ZZDialogHandleDelegate>
+@interface ZZDialogViewController ()
 @property(nonatomic,strong,readwrite) ZZDialog *dialog;
 @property(nonatomic,strong) ZZMaskView *maskView;
 @end
@@ -39,6 +39,8 @@
     self.maskView.zz_tapAction(^(UIView *v){
       [weakSelf.dialog dismiss];
     });
+    self.dialogDelegate = self;
+    self.handleDelegate = self;
 }
 
 - (void)awakeFromNib{
@@ -46,7 +48,8 @@
 }
 
 -(void)viewDidLoad{
-   [self.view addSubview:self.dialog];
+    [super viewDidLoad];
+    [self.view addSubview:self.dialog];
 }
 
 

@@ -80,7 +80,8 @@
 {
 
     _maxLength = maxLength;
-    self.wordNumLabel.text = [NSString stringWithFormat:@"0/%ld字", (long)_maxLength];
+    if(!_wordNumFormat) {_wordNumFormat = @"%ld/%ld字";}
+    self.wordNumLabel.text = [NSString stringWithFormat:_wordNumFormat, 0,(long)_maxLength];
 }
 - (void)placeholderTextViewdidChange:(NSNotification *)notificat
 {
@@ -98,7 +99,7 @@
         textView.text = [textView.text substringToIndex:self.maxLength];
     }
     long length = [textView.text length] > _maxLength ? _maxLength : [textView.text length];
-    self.wordNumLabel.text = [NSString stringWithFormat:@"%ld/%ld字", length, (long)_maxLength];
+    self.wordNumLabel.text = [NSString stringWithFormat:_wordNumFormat, length, (long)_maxLength];
     if (self.didChangeText) {
         self.didChangeText(textView);
     }
@@ -116,7 +117,7 @@
     [super setText:text];
     if (text.length > 0) {
         [self.placeholderLabel setHidden:YES];
-        self.wordNumLabel.text = [NSString stringWithFormat:@"%ld/%ld字", (long)[text length], (long)_maxLength];
+        self.wordNumLabel.text = [NSString stringWithFormat:_wordNumFormat, (long)[text length], (long)_maxLength];
         [self refreshFram];
     }
 }

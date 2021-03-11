@@ -47,6 +47,12 @@ TODO: Add long description of the pod here.
     'ZZUIKit/Classes/ZZTextImgView/*',
     'ZZUIKit/Classes/ZZTextWidget/*',
     'ZZUIKit/Classes/ZZViewController/*',
+    'ZZUIKit/Classes/ZZInfoWidget/*',
+    'ZZUIKit/Classes/ZZSwitchWidget/*',
+    'ZZUIKit/Classes/ZZCheckBox/*',
+    'ZZUIKit/Classes/ZZRaido/*',
+    'ZZUIKit/Classes/ZZSelect/*',
+    'ZZUIKit/Classes/ZZOption/*',
     ]
   
   s.resource_bundles = {

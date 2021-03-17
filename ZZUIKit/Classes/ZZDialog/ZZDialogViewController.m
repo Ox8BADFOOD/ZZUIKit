@@ -39,8 +39,6 @@
     self.maskView.zz_tapAction(^(UIView *v){
       [weakSelf.dialog dismiss];
     });
-    self.dialogDelegate = self;
-    self.handleDelegate = self;
 }
 
 - (void)awakeFromNib{

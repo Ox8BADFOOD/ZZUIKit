@@ -25,12 +25,21 @@ bool is_X_like(void){
     return isBangsScreen;
 }
 
+
 CGFloat NAV_BAR_H(void){
     return 44;
 };
 
 CGFloat STATUS_BAR_H(void){
-    return is_X_like() ? 44 : 20;
+    CGFloat height;
+    if (@available(iOS 13.0, *)) {
+        height = [UIApplication sharedApplication].delegate.window.windowScene.statusBarManager.statusBarFrame.size.height;
+    }else{
+        height = [UIApplication sharedApplication].statusBarFrame.size.height;
+//        return is_X_like() ? 44 : 20;
+    }
+    return height;
+    
 };
 
 CGFloat NAV_STATUS_BAR_H(void){

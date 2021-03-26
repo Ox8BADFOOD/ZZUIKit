@@ -30,10 +30,17 @@ FLEXSET(placeholder){
 
 FLEXSET(edit){
     self.field.enabled = String2BOOL(sValue);
+    self.field.placeholder = @"";
 }
 
 FLEXSET(line){
-    self.line.hidden = String2BOOL(sValue);
+    self.line.hidden = !String2BOOL(sValue);
+}
+
+FLEXSET(font){
+    UIFont* font = fontFromString(sValue);
+    self.title.font = font;
+    self.field.font = font;
 }
 
 @end

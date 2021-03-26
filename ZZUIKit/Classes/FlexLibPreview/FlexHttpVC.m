@@ -37,6 +37,7 @@ static NSString* gLastVisitedUrl = nil;
     
     [self viewFlexWithUrl:self.url];
 }
+
 - (void)reloadFlexView
 {
      [self viewFlexWithUrl:self.url];
@@ -178,7 +179,7 @@ static NSString* gLastVisitedUrl = nil;
         [parentVC.navigationController pushViewController:vc animated:YES];
     }else{
         UINavigationController* nav = [[UINavigationController alloc]initWithRootViewController:vc];
-        
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [parentVC presentViewController:nav animated:YES completion:nil];
     }
 }

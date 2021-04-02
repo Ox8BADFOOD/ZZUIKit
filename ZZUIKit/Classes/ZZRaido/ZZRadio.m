@@ -45,7 +45,7 @@ FLEXSET(label){
                 if (![[view valueForKey:@"selected"] boolValue]) {
                     continue;
                 }
-                self.selectStr = [[view valueForKey:@"title"] valueForKey:@"text"];
+                self.selectStr = [[view valueForKey:@"titleLab"] valueForKey:@"text"];
                 if (self.selectedBlock) {
                     self.selectedBlock(self.selectStr);
                     //退出循环

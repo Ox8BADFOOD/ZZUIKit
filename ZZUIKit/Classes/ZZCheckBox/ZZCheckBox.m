@@ -25,7 +25,7 @@
     _imgV.hidden = true;
     _selected = false;
     _reverse = true;
-    _title.textAlignment = NSTextAlignmentLeft;
+    _titleLab.textAlignment = NSTextAlignmentLeft;
     @weakify(self);
     self.zz_tapAction(^(UIView *view){
         @strongify(self);
@@ -77,6 +77,6 @@ FLEXSET(unselImg){
 }
 
 FLEXSET(title){
-    self.title.text = sValue;
+    self.titleLab.text = sValue;
 }
 @end

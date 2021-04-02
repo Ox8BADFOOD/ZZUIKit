@@ -8,6 +8,10 @@
 #import "ZZOption.h"
 #import <ZZUIKit/ZZUIKitEx.h>
 
+@interface ZZOption()
+@property(nonatomic,copy) NSString *title;
+@end
+
 @implementation ZZOption
 
 //-(NSBundle *)bundleForRes{
@@ -17,14 +21,15 @@
 //    return resourceBundle;
 //}
 
--(UILabel *)title{
-    if(!_title){
-        _title = [[UILabel alloc] init];
-        _title.textAlignment = NSTextAlignmentCenter;
-        [_title setLayoutAttr:@"flex" Value:@"1"];
-        [_title enableFlexLayout:true];
+-(UILabel *)titleLab{
+    if(!_titleLab){
+        _titleLab = [[UILabel alloc] init];
+        _titleLab.text = _title;
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+        [_titleLab setLayoutAttr:@"flex" Value:@"1"];
+        [_titleLab enableFlexLayout:true];
     }
-    return _title;
+    return _titleLab;
 }
 
 -(void)onInit{
@@ -32,7 +37,7 @@
     _unselTextColor = @"#333333";
     _reverse = true;
     UIView *frameView = [self valueForKey:@"frameView"];
-    [frameView addSubview:self.title];
+    [frameView addSubview:self.titleLab];
     self.selected = false;
     @weakify(self);
     self.zz_tapAction(^(UIView *view){
@@ -70,7 +75,7 @@
     if (_selBgc && _unselBgc) {
         self.backgroundColor = _selected ?colorFromString(_selBgc, nil):colorFromString(_unselBgc, nil);
     }
-    self.title.textColor = _selected ? colorFromString(_selTextColor, nil) : colorFromString(_unselTextColor, nil);
+    self.titleLab.textColor = _selected ? colorFromString(_selTextColor, nil) : colorFromString(_unselTextColor, nil);
 }
 
 FLEXSET(reverse){
@@ -112,6 +117,7 @@ FLEXSET(unselBorderColor){
 }
 
 FLEXSET(title){
-    self.title.text = sValue;
+    self.title = sValue;
+    self.titleLab.text = sValue;
 }
 @end

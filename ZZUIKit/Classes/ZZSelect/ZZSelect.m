@@ -24,7 +24,7 @@
                 if (![[view valueForKey:@"selected"] boolValue]) {
                     continue;
                 }
-                NSString *str = [[view valueForKey:@"title"] valueForKey:@"text"];
+                NSString *str = [[view valueForKey:@"titleLab"] valueForKey:@"text"];
                 [_selectArr addObject:str];
             }
         }

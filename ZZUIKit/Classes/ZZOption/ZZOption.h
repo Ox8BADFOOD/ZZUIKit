@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) void(^clickEvent)(ZZOption *box);
 
 /// 文本
-@property(nonatomic,strong) UILabel *title;
+@property(nonatomic,strong) UILabel *titleLab;
 #pragma mark -- 无图片的属性
 /// 选中的背景色
 @property(nonatomic,copy) NSString *selBgc;

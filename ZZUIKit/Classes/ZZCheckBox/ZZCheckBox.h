@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 图片控件；无图片的时候隐藏
 @property(nonatomic,strong) UIImageView *imgV;
 /// 文本
-@property(nonatomic,strong) UILabel *title;
+@property(nonatomic,strong) UILabel *titleLab;
 /// xml创建的View
 @property(nonatomic,strong) UIView *wrapper;
 

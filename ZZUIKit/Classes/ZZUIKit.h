@@ -28,6 +28,7 @@
 #import "ZZTextImgView.h"
 
 #import "ZZTextWidget.h"
+#import "ZZTextInputWidget.h"
 
 
 #endif /* ZZUIKit_h */

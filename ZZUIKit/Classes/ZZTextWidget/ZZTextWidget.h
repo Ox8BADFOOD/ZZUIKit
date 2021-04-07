@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UILabel *wordNumLabel;
 @property (copy, nonatomic) NSString *wordNumFormat;
 
+
 //文字输入
 @property (copy, nonatomic) void(^didChangeText)(ZZTextWidget *textView);
 - (void)didChangeText:(void(^)(ZZTextWidget *textView))block;

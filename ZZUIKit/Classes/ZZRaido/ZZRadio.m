@@ -70,14 +70,20 @@ FLEXSET(label){
         }
     }
     
-    for (ZZCheckBox *box in _itemArr) {
-        box.selected = false;
+    for (UIView *box in _itemArr) {
+        if ([box respondsToSelector:@selector(setSelected:)]) {
+            [box setValue:@(false) forKey:@"selected"];
+        }
         self.selectStr = nil;
     }
 }
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(NSBundle *)bundleForRes{
+    return nil;
 }
 
 @end

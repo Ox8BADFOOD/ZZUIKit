@@ -120,4 +120,8 @@ FLEXSET(title){
     self.title = sValue;
     self.titleLab.text = sValue;
 }
+
+-(NSBundle *)bundleForRes{
+    return nil;
+}
 @end

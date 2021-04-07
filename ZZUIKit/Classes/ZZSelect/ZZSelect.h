@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 包裹ZZCheckBox
 @interface ZZSelect : FlexCustomBaseView
 /// 选中的标签数组
-@property(nonatomic,strong) NSMutableArray *selectArr;
-@property(nonatomic,copy) void (^selectBlock)(NSMutableArray *arr);
+@property(nonatomic,strong) NSMutableArray<NSString *> *selectArr;
+@property(nonatomic,copy) void (^selectBlock)(NSMutableArray<NSString *> *arr);
 @end
 
 NS_ASSUME_NONNULL_END

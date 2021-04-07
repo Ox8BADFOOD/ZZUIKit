@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 备注内容 -->
+<UIView layout="flex:1" attr="bgColor:white">
+    <FlexTextView name="textView" attr="placeholder:请输入备注,font:PingFangSC-Regular|15" layout="flex:1"/>
+    <UILabel name="countLab" attr="font:PingFangSC-Regular|15,color:#CCCCCC,text:0/100字" layout="alignSelf:flex-end"/>
+</UIView>

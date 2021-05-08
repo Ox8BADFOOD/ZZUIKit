@@ -33,12 +33,6 @@
 -(void)commonInit{
     self.definesPresentationContext = true;
     self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    self.maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
-    __weak typeof(self) weakSelf = self;
-    [self.view insertSubview:self.maskView atIndex:0];
-    self.maskView.zz_tapAction(^(UIView *v){
-      [weakSelf.dialog dismiss];
-    });
 }
 
 - (void)awakeFromNib{
@@ -48,6 +42,12 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.view addSubview:self.dialog];
+    self.maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
+    __weak typeof(self) weakSelf = self;
+    [self.view insertSubview:self.maskView atIndex:0];
+    self.maskView.zz_tapAction(^(UIView *v){
+      [weakSelf.dialog dismiss];
+    });
 }
 
 

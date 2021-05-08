@@ -65,6 +65,7 @@ ZZDialogCancelMarginMake(CGFloat top, CGFloat right)
 @property(nonatomic,assign) ZZDialogCancelPosition cancelPosition;
 
 -(void)dismiss;
+-(void)dismissThen:(void(^)(void))todo;
 @end
 
 NS_ASSUME_NONNULL_END

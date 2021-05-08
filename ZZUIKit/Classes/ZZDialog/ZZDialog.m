@@ -104,6 +104,27 @@
     }
 }
 
+-(void)dismissThen:(void(^)(void))todo{
+    UIViewController *controller = [self zz_viewController];
+    if (!controller ) {
+        return;
+    }
+    if (controller.presentingViewController) {
+        //presented
+        [controller dismissViewControllerAnimated:false completion:todo];
+    }else{
+        if (self.superview != controller.view) {
+            [self.superview removeFromSuperview];
+        }else{
+            [self removeFromSuperview];
+            
+        }
+        if (todo) {
+            todo();
+        }
+    }
+}
+
 -(void)setCancelPosition:(ZZDialogCancelPosition)cancelPosition{
     _cancelPosition = cancelPosition;
     [self placeCancelBtn];

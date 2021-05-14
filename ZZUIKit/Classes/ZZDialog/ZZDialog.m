@@ -15,6 +15,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
+        [self addSubview:self.handleViewWrapper];
         [self addSubview:self.handleView];
         self.cancelMargin = ZZDialogCancelMarginMake(10, 10);
         self.cancelPosition = ZZDialogCancelPositionTopRight;
@@ -24,7 +25,9 @@
 
 -(void)setHandleDelegate:(id<ZZDialogHandleDelegate>)handleDelegate{
     _handleDelegate = handleDelegate;
-    _handleView.frame = [handleDelegate preferredFrameForHandleInDialog:self];
+    CGRect frame = [handleDelegate preferredFrameForHandleInDialog:self];
+    _handleViewWrapper.frame = CGRectMake(frame.origin.x, frame.origin.y - 0.5, frame.size.width, frame.size.height + 0.5);
+    _handleView.frame = frame;
     NSArray *dicArr = [handleDelegate itemsForHandleInDialog:self];
 //    @weakify(self);
     [dicArr enumerateObjectsUsingBlock:^(NSDictionary *itemDic, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -172,13 +175,25 @@
     return view;
 }
 
+-(UIView *)handleViewWrapper{
+    if(!_handleViewWrapper){
+        _handleViewWrapper = [UIView new];
+        _handleViewWrapper.backgroundColor = [UIColor clearColor];
+    }
+    return _handleViewWrapper;
+}
+
+-(void)setSeparateColor:(UIColor *)separateColor{
+    _handleViewWrapper.backgroundColor = separateColor;
+}
+
 -(UIStackView *)handleView{
     if(!_handleView){
         _handleView = [[UIStackView alloc] init];
         _handleView.axis = UILayoutConstraintAxisHorizontal;
         _handleView.distribution = UIStackViewDistributionFillEqually;
         _handleView.alignment = UIStackViewAlignmentFill;
-        _handleView.spacing = 0.8;
+        _handleView.spacing = 0.5;
     }
     return _handleView;
 }

@@ -42,7 +42,7 @@
 
 
 #pragma mark -- event
-static void *ZZ_eventBlocKey = &ZZ_eventBlocKey;
+static char ZZ_eventBlocKey;
 
 -(void)setZz_eventBlock:(ZZControlEventsBlock)zz_eventBlock{
     objc_setAssociatedObject(self, &ZZ_eventBlocKey, zz_eventBlock, OBJC_ASSOCIATION_COPY);

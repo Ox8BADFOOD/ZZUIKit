@@ -54,7 +54,8 @@ ZZDialogCancelMarginMake(CGFloat top, CGFloat right)
 /// content的view
 @property(nonatomic,strong) UIView *contentView;
 @property(nonatomic,strong) UIStackView *handleView;
-
+@property(nonatomic,strong) UIView *handleViewWrapper;
+-(void)setSeparateColor:(UIColor *)separateColor;
 
 /// cancelImg cancelBtn 二选一
 @property(nonatomic,strong,nullable) UIImage *cancelImg;

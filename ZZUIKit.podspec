@@ -53,6 +53,7 @@ TODO: Add long description of the pod here.
     'ZZUIKit/Classes/ZZRaido/*',
     'ZZUIKit/Classes/ZZSelect/*',
     'ZZUIKit/Classes/ZZOption/*',
+    'ZZUIKit/Classes/ZZWebviewController/*',
     ]
   
   s.resource_bundles = {

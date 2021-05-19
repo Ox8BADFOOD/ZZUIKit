@@ -30,5 +30,6 @@
 #import "ZZTextWidget.h"
 #import "ZZTextInputWidget.h"
 #import "ZZWebviewController.h"
+#import "ZZNavigationController.h"
 
 #endif /* ZZUIKit_h */

@@ -7,11 +7,11 @@
 
 #import "ZZDialogViewController.h"
 #import "ZZUIKitEx.h"
-#import "ZZMaskView.h"
+
 
 @interface ZZDialogViewController ()
 @property(nonatomic,strong,readwrite) ZZDialog *dialog;
-@property(nonatomic,strong) ZZMaskView *maskView;
+
 @end
 
 @implementation ZZDialogViewController

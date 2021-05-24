@@ -7,6 +7,7 @@
 
 #import <ZZUIKit/ZZViewController.h>
 #import "ZZDialog.h"
+#import "ZZMaskView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZZDialogViewController : ZZViewController
 @property(nonatomic,strong,readonly) ZZDialog *dialog;
+@property(nonatomic,strong) ZZMaskView *maskView;
 @property(nonatomic,weak,nullable) id<ZZDialogDelegate> dialogDelegate;
 @property(nonatomic,weak,nullable) id<ZZDialogHandleDelegate> handleDelegate;
 

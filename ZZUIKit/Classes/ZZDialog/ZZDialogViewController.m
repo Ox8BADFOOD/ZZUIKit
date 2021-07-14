@@ -42,7 +42,6 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.view addSubview:self.dialog];
-    self.maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
     __weak typeof(self) weakSelf = self;
     [self.view insertSubview:self.maskView atIndex:0];
     self.maskView.zz_tapAction(^(UIView *v){
@@ -50,6 +49,12 @@
     });
 }
 
+-(ZZMaskView *)maskView{
+    if(!_maskView){
+        _maskView = [[ZZMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W(), SCREEN_H())];
+    }
+    return _maskView;
+}
 
 #pragma mark -- set
 - (void)setMaskColor:(UIColor *)maskColor{

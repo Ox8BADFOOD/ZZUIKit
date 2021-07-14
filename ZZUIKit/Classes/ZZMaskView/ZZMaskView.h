@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZZMaskView : UIView
 
 @property(nonatomic,assign) UIBlurEffectStyle blurStyle;
-@property(nonatomic,assign) UIColor *maskColor;
+@property(nonatomic,strong) UIColor *maskColor;
 @end
 
 NS_ASSUME_NONNULL_END

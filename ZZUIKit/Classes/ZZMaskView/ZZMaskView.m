@@ -22,7 +22,7 @@
     [self addSubview:self.visualView];
 }
 
--(void)setMaskColor:(UIColor *)maskColor{
+- (void)setMaskColor:(UIColor *)maskColor{
     _maskColor = maskColor;
     [self.visualView removeFromSuperview];
     self.backgroundColor = self.maskColor;

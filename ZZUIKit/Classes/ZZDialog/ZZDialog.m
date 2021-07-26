@@ -142,6 +142,7 @@
     if (!_cancelBtn) {
         return;
     }
+    [_cancelBtn sizeToFit];
     switch (_cancelPosition) {
         case ZZDialogCancelPositionTopRight:{
                 _cancelBtn.zz_right = self.zz_width - _cancelMargin.paddingRight;

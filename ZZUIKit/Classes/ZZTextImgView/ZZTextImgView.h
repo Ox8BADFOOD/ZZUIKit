@@ -26,6 +26,7 @@ typedef NS_ENUM(NSUInteger, ZZTextImgAlign) {
 @property(nonatomic,assign,readonly) ZZDirection direction;
 //排列方式
 @property(nonatomic,assign,readonly) ZZTextImgAlign widgetAlign;
+@property(nonatomic,strong) UIStackView *inner;
 @property(nonatomic,strong) UILabel *lab;
 @property(nonatomic,strong) UIImageView *imgV;
 @end

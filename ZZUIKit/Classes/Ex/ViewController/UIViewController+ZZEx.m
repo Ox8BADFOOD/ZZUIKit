@@ -15,6 +15,7 @@
     ZZ_best_Swizzle(self, @selector(viewDidLoad), @selector(zz_viewDidLoad));
     ZZ_best_Swizzle(self, @selector(viewWillAppear:), @selector(zz_viewWillAppear));
     ZZ_best_Swizzle(self, @selector(viewDidAppear:), @selector(zz_viewDidAppear));
+    ZZ_best_Swizzle(self, @selector(viewDidDisappear:), @selector(zz_viewDidDisappear));
     ZZ_best_Swizzle(self, @selector(viewWillLayoutSubviews), @selector(zz_viewWillLayoutSubviews));
     ZZ_best_Swizzle(self, @selector(viewDidLayoutSubviews), @selector(zz_viewDidLayoutSubviews));
 }
@@ -67,6 +68,23 @@
     if (self.zz_viewDidAppearBlock) {
         @weakify(self);
         self.zz_viewDidAppearBlock(weak_self);
+    }
+}
+
+#pragma mark -- viewDidAppearBlock
+-(void)setZz_viewDidDisappearBlock:(void (^)(__kindof UIViewController * _Nonnull))zz_viewDidDisappearBlock{
+    objc_setAssociatedObject(self, @selector(zz_viewDidDisappearBlock), zz_viewDidDisappearBlock, OBJC_ASSOCIATION_COPY);
+}
+
+-(void (^)(__kindof UIViewController * _Nonnull))zz_viewDidDisappearBlock{
+    return objc_getAssociatedObject(self, @selector(zz_viewDidDisappearBlock));
+}
+
+-(void)zz_viewDidDisappear{
+    [self zz_viewDidDisappear];
+    if (self.zz_viewDidDisappearBlock) {
+        @weakify(self);
+        self.zz_viewDidDisappearBlock(weak_self);
     }
 }
 

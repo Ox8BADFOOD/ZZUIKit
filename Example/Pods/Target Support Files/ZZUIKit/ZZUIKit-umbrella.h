@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ZZNavigationController.h"
 #import "ZZUIKit.h"
 #import "ZZUIKitConst.h"
 #import "UIAlertController+ZZEx.h"
@@ -29,6 +30,7 @@
 #import "UIView+ZZFrame.h"
 #import "UIView+ZZGesture.h"
 #import "UIView+ZZShot.h"
+#import "UIViewController+ZZEx.h"
 #import "ZZUIKitEx.h"
 #import "ZZColor.h"
 #import "ZZFont.h"
@@ -50,8 +52,16 @@
 #import "ZZDialog.h"
 #import "ZZDialogViewController.h"
 #import "ZZTextImgView.h"
+#import "ZZTextInputWidget.h"
 #import "ZZTextWidget.h"
 #import "ZZViewController.h"
+#import "ZZInfoWidget.h"
+#import "ZZSwitchWidget.h"
+#import "ZZCheckBox.h"
+#import "ZZRadio.h"
+#import "ZZSelect.h"
+#import "ZZOption.h"
+#import "ZZWebviewController.h"
 
 FOUNDATION_EXPORT double ZZUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZZUIKitVersionString[];

@@ -40,7 +40,8 @@
     "ZZUIKit/Classes/ZZCheckBox/*",
     "ZZUIKit/Classes/ZZRaido/*",
     "ZZUIKit/Classes/ZZSelect/*",
-    "ZZUIKit/Classes/ZZOption/*"
+    "ZZUIKit/Classes/ZZOption/*",
+    "ZZUIKit/Classes/ZZWebviewController/*"
   ],
   "resource_bundles": {
     "ZZUIKit": [

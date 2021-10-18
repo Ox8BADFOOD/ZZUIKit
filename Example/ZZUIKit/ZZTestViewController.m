@@ -6,20 +6,20 @@
 //  Copyright (c) 2021 bymiracles@163.com. All rights reserved.
 //
 
-#import "ZZViewController.h"
+#import "ZZTestViewController.h"
 #import <ZZUIKit/ZZUIKitEx.h>
 #import <ZZUIKit/ZZDialog.h>
 #import <ZZUIKit/ZZDialogViewController.h>
 #import <ZZUIKit/ZZTextWidget.h>
 CGFloat const handleBarH = 200;
-@interface ZZViewController ()<ZZDialogDelegate,ZZDialogHandleDelegate>
+@interface ZZTestViewController ()<ZZDialogDelegate,ZZDialogHandleDelegate>
 @property(nonatomic,strong) ZZDialog *dialog;
 @property(nonatomic,strong) ZZDialogViewController *dialogVC;
 @property (strong, nonatomic) IBOutlet ZZTextWidget *textWidget;
 @property(nonatomic,strong) NSArray *titles;
 @end
 
-@implementation ZZViewController
+@implementation ZZTestViewController
 
 - (void)viewDidLoad
 {

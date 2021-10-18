@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) void(^zz_viewDidLoadBlock)(__kindof UIViewController *vc);
 @property(nonatomic,copy) void(^zz_viewWillAppearBlock)(__kindof UIViewController *vc);
 @property(nonatomic,copy) void(^zz_viewDidAppearBlock)(__kindof UIViewController *vc);
+@property(nonatomic,copy) void(^zz_viewDidDisappearBlock)(__kindof UIViewController *vc);
 @property(nonatomic,copy) void(^zz_viewWillLayoutSubviewsBlock)(__kindof UIViewController *vc);
 @property(nonatomic,copy) void(^zz_viewDidLayoutSubviewsBlock)(__kindof UIViewController *vc);
 

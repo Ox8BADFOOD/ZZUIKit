@@ -43,4 +43,19 @@ FLEXSET(font){
     self.field.font = font;
 }
 
+FLEXSET(color){
+    UIColor* color = colorFromString(sValue, nil);
+    self.field.textColor = color;
+}
+
+FLEXSET(titleColor){
+    UIColor* color = colorFromString(sValue, nil);
+    self.title.textColor = color;
+}
+
+FLEXSET(cursorColor){
+    UIColor* color = colorFromString(sValue, nil);
+    self.field.tintColor = color;
+}
+
 @end

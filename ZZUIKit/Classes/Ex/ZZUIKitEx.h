@@ -30,4 +30,5 @@
 #import "UIViewController+ZZEx.h"
 #import <ZZFoundation/ZZFoundation.h>
 
+#import "UITableView+ZZEx.h"
 #endif /* ZZUIKitEx_h */

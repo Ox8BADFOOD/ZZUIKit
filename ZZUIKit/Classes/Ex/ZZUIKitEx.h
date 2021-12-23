@@ -31,4 +31,5 @@
 #import <ZZFoundation/ZZFoundation.h>
 
 #import "UITableView+ZZEx.h"
+#import "UIView+Shape.h"
 #endif /* ZZUIKitEx_h */

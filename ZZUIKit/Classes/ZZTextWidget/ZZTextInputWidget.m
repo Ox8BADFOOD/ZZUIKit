@@ -10,16 +10,16 @@
 
 @interface ZZTextInputWidget()
 @property(nonatomic,strong) UILabel *countLab;
-@property(nonatomic,strong) FlexTextView *textView;
+
 @end
 
 @implementation ZZTextInputWidget
 
+
 -(void)onInit{
-    _currentCount = 0;
     self.maxCount = 100;
     self.placehold = @"请输入";
-    self.countLab.text = [NSString stringWithFormat:self.countFormat,_currentCount,_maxCount];
+    self.countLab.text = [NSString stringWithFormat:self.countFormat,self.currentCount,_maxCount];
     self.textView.placeholder = self.placehold;
     self.textView.font = [UIFont systemFontOfSize:15];
     self.countLab.font = [UIFont systemFontOfSize:15];
@@ -41,13 +41,17 @@
         (textView.markedTextRange == nil)) {
         textView.text = [textView.text substringToIndex:_maxCount];
     }
-    _currentCount = textView.text.length > _maxCount ? _maxCount : textView.text.length;
-    self.countLab.text = [NSString stringWithFormat:self.countFormat,_currentCount,_maxCount];
+
+    self.countLab.text = [NSString stringWithFormat:self.countFormat,self.currentCount,_maxCount];
+}
+
+-(NSInteger)currentCount{
+    return _textView.text.length > _maxCount ? _maxCount : _textView.text.length;
 }
 
 -(void)setMaxCount:(NSInteger)maxCount{
     _maxCount = maxCount;
-    self.countLab.text = [NSString stringWithFormat:self.countFormat,_currentCount,_maxCount];
+    self.countLab.text = [NSString stringWithFormat:self.countFormat,self.currentCount,_maxCount];
 }
 
 -(void)setPlacehold:(NSString *)placehold{
@@ -75,7 +79,7 @@ FLEXSET(countFont){
 
 FLEXSET(countFormat){
     self.countFormat = sValue;
-    self.countLab.text = [NSString stringWithFormat:self.countFormat,_currentCount,_maxCount];
+    self.countLab.text = [NSString stringWithFormat:self.countFormat,self.currentCount,_maxCount];
 }
 
 -(NSString *)countFormat{
@@ -94,6 +98,7 @@ FLEXSET(countFormat){
 
 -(void)setText:(NSString *)text{
     _textView.text = text;
+    self.countLab.text = [NSString stringWithFormat:self.countFormat,self.currentCount,_maxCount];
 }
 
 -(NSString *)text{

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 计数文字的格式化字符串
 @property(nonatomic,copy,nullable) NSString *countFormat;
 @property(nonatomic,copy) NSString *text;
+@property(nonatomic,strong) FlexTextView *textView;
 
 @end
 
